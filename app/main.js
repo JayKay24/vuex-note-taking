@@ -77,5 +77,13 @@ new Vue({
   components: {
     'input-component': inputComponent,
     'note-count-component': noteCountComponent
+  },
+  computed: {
+    notes() {
+      return this.$store.getters.getNotes
+    },
+    timestamps() {
+      return this.$store.getters.getTimestamps
+    }
   }
 })
